@@ -17,7 +17,7 @@
 *
 * @author <a href='mailto:th33musk3t33rs@gmail.com'>3.musketeers</a>
 *
-* @since 0.1
+* @since 0.01
 */
 
 import grails.converters.JSON;
@@ -26,7 +26,7 @@ import grails.jsonp.JSONP
 
 class JsonpGrailsPlugin {
 	// the plugin version
-	def version = "0.5"
+	def version = "0.01"
 	// the version or versions of Grails the plugin is designed for
 	def grailsVersion = "2.0 > *"
 
