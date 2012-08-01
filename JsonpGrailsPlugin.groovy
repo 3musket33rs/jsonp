@@ -42,36 +42,28 @@ class JsonpGrailsPlugin {
 
 	// TODO Fill in these fields
 	def title = "Jsonp Plugin" // Headline display name of the plugin
-	def author = "Your name"
-	def authorEmail = ""
+	def author = '3.musket33rs'
+	def authorEmail = 'th33musk3t33rs@gmail.com'
+	def organization = [name: '3.musket33rs', url: 'http://3musket33rs.github.com/']
+	def developers = [
+		[ name: "Aramis alias Sebastien Blanc", email: "scm.blanc@gmail.com"],
+		[ name: "Athos alias Corinne Krych", email: "corinnekrych@gmail.com" ],
+		[ name: "Porthos alias Fabrice Matrat", email: "fabricematrat@gmail.com" ]
+	]
 	def description = '''\
 Override render method defined for all controller to add parameter callback 
 function name to provide cross domain JSONP RESTfull controllers
 '''
-
 	// URL to the plugin's documentation
 	def documentation = "http://grails.org/plugin/jsonp"
-
-	// Extra (optional) plugin metadata
 
 	// License: one of 'APACHE', 'GPL2', 'GPL3'
 	def license = "APACHE"
 
-	// Details of company behind the plugin (if there is one)
-	//def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
-
-	// Any additional developers beyond the author specified above.
-	def developers = [
-		[ name: "Corinne Krych", email: "corinnekrych@gmail.com" ],
-		[ name: "Fabrice Matrat", email: "fabricematrat@gmail.com" ],
-		[ name: "Sebastien Blanc", email: "scm.blanc@gmail.com" ]
-	]
-
-	// Location of the plugin's issue tracker.
-	//    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
-
 	// Online location of the plugin's browseable source code.
-	//    def scm = [ url: "http://svn.grails-plugins.codehaus.org/browse/grails-plugins/" ]
+	def issueManagement = [system: 'GitHub', url: 'https://github.com/3musket33rs/jsonp/issues']
+	def scm = [url: 'https://github.com/3musket33rs/jsonp']
+
 
 	def doWithDynamicMethods = { ctx ->
 
