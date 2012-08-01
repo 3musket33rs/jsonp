@@ -2,7 +2,7 @@ jsonp
 =====
 
 A plugin that allow JSONP request request/response.
-Mandatory to do
+Mandatory for html5 mobile scaffolding plugin for hybrid mobile web app
 
 To test it
 ===========
