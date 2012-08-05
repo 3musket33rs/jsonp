@@ -5,15 +5,21 @@ grails.project.target.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 grails.project.dependency.resolution = {
-    inherits("global") {
+inherits("global") {
     }
-    log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+    log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+    checksums true // Whether to verify checksums on resolve
+
     repositories {
+        inherits true // Whether to inherit repository definitions from plugins
+        grailsPlugins()
+        grailsHome()
         grailsCentral()
+        mavenCentral()
     }
+    dependencies {
+    }
+
     plugins {
-        build(":release:$grailsVersion") {
-            export = false
-        }
     }
 }
