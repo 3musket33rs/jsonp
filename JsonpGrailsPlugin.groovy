@@ -48,11 +48,13 @@ class JsonpGrailsPlugin {
 	def doWithDynamicMethods = { ctx ->
 
 		application.controllerClasses.each { controller ->
-			def original = controller.metaClass.pickMethod("render", [Converter] as Class[])
-			controller.metaClass.render = {JSON arg ->
-				def jsonp = new JSONP(response, params.callback, arg.target)			
-				original.invoke(delegate, jsonp)
-			}
-		}
+            def original = controller.metaClass.pickMethod("render", [Converter] as Class[])
+            controller.metaClass.render = {JSON arg ->
+                if (params.callback) {
+                    arg = new JSONP(response, params.callback, arg.target)
+                }
+                original.invoke(delegate, arg)
+            }
+        }
 	}
 }
