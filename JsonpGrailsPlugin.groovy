@@ -23,7 +23,7 @@ import grails.plugin.jsonp.JSONP
  * @since 0.1
  */
 class JsonpGrailsPlugin {
-	def version = "0.1"
+	def version = "0.2"
 	def grailsVersion = "2.0 > *"
 
 	def loadAfter = ['controllers']
